@@ -1,8 +1,15 @@
+import Navbar from "./components/Navbar"
+
 function App() {
 
   return (
     <>
-      <p>Hello World</p>
+      <main>
+        <Navbar />
+        <header>
+          <h1>Extensions List</h1>
+        </header>
+      </main>
     </>
   )
 }

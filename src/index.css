@@ -1,0 +1,69 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* variables */
+
+:root {
+    --Neutral-900: #050A1E;
+    --Neutral-800: #1F2535;
+    --Neutral-600: hsl(226, 11%, 37%);
+    --Neutral-300: hsl(0, 0%, 78%);
+    --Neutral-200: hsl(217, 61%, 90%);
+    --Neutral-100: hsl(0, 0%, 93%);
+    --Neutral-0: hsl(200, 60%, 99%);
+
+
+    --Red-400: hsl(3, 86%, 64%);
+    --Red-500: hsl(3, 71%, 56%);
+    --Red-700: hsl(3, 77%, 44%);
+
+    --Light-Gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --Dark-Gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+    font-size: 16px;
+}
+
+/* change default styles */
+
+body {
+    background-color: var(--Neutral-200);
+    font-family: "Noto Sans", sans-serif;
+}
+
+main {
+    padding: 24px 16px;
+}
+
+
+/* Navbar styles */
+
+.nav_bar {
+    background-color: var(--Neutral-0);
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px var(--Neutral-300);
+}
+
+.change_theme_btn {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+    background: var(--Light-Gradient);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* header styles */
+
+header h1 {
+    text-align: center;
+    margin-top: 40px;
+}
