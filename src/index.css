@@ -31,6 +31,7 @@
 body {
     background-color: var(--Neutral-200);
     font-family: "Noto Sans", sans-serif;
+    color: var(--Light-Gradient);
 }
 
 .container {
@@ -38,7 +39,7 @@ body {
 }
 
 button {
-    border: none;
+    border: 0px;
 }
 
 /* header styles */
@@ -46,4 +47,26 @@ button {
 header h1 {
     text-align: center;
     margin-top: 40px;
+}
+
+.status_btn_container {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.default_btn {
+    padding: 12px 20px;
+    border-radius: 32px;
+    color: var(--Neutral-800);
+    background-color: var(--Neutral-0);
+    cursor: pointer;
+    box-shadow: 0px 0px 8px var(--Neutral-300);
+}
+
+.active {
+    background-color: var(--Red-700);
+    color: var(--Neutral-0);
 }
