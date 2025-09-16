@@ -51,6 +51,7 @@ header h1 {
 
 .status_btn_container {
     margin-top: 24px;
+    margin-bottom: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
