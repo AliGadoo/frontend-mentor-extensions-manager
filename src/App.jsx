@@ -46,7 +46,7 @@ function App() {
             {statues.map((status) => (
               <button
                 key={status}
-                className={`default_btn ${
+                className={`default_btn statues_btn ${
                   activeBtn === status ? "active" : ""
                 }`}
                 onClick={() => {
