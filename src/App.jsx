@@ -5,9 +5,21 @@ import Card from "./components/Card/Card.jsx";
 function App() {
   const [activeBtn, setActiveBtn] = useState("All");
   const statues = ["All", "Active", "Inactive"];
+  const [allExtensions, setAllExtensions] = useState([]);
   const [extensionsList, setExtensionList] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  function filterExtensions(status) {
+    if (status === "All") {
+      setExtensionList(allExtensions);
+    } else {
+      const filteredList = allExtensions.filter((ext) =>
+        status === "Active" ? ext.isActive : !ext.isActive
+      );
+      setExtensionList(filteredList);
+    }
+  }
 
   const fetchExtensions = async () => {
     setIsLoading(true);
@@ -21,6 +33,7 @@ function App() {
       if (!data) {
         setErrorMessage("failed to fetch extensions. Please try again later");
       }
+      setAllExtensions(data);
       setExtensionList(data);
     } catch (e) {
       console.log(e);
@@ -31,9 +44,6 @@ function App() {
 
   useEffect(() => {
     fetchExtensions();
-    console.log(extensionsList);
-    console.log(errorMessage);
-    console.log(isLoading);
   }, []);
 
   return (
@@ -51,6 +61,7 @@ function App() {
                 }`}
                 onClick={() => {
                   setActiveBtn(status);
+                  filterExtensions(status);
                 }}
               >
                 {status}
